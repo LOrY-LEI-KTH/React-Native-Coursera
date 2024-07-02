@@ -7,7 +7,9 @@ const Stack = createNativeStackNavigator();
 
 const RootNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Welcome">
+    <Stack.Navigator initialRouteName="Welcome"      screenOptions={{
+      headerTitleAlign: 'center', // Center the title
+    }}>
      <Stack.Screen 
           name="Welcome" 
           component={WelcomeScreen} 
