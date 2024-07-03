@@ -14,8 +14,9 @@ const WelcomeScreen = ({ navigation }) => {
           />
           <Text style={styles.title}>Little Lemon, your local Mediterranean Bistro</Text>
 
-          <Pressable  style={styles.button}>
-            <Text style={styles.buttonText}>Log in</Text>
+          <Pressable  style={styles.button} 
+              onPress={() => {navigation.navigate("Subscribe");}}>
+            <Text style={styles.buttonText}>Newsletter</Text>
           </Pressable>
   </View>);
 };
@@ -41,19 +42,15 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   button: {
-    fontSize: 22,
-    padding: 10,
-    marginVertical: 8,
-    margin: 100,
-    backgroundColor: '#EE9972',
-    borderColor: '#EE9972',
-    borderWidth: 2,
-    borderRadius: 50,
+    borderRadius: 8,
+    backgroundColor: '#495E57',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    padding: 8,
   },
   buttonText: {
-    color: 'black',
-    textAlign: 'center',
-    fontSize: 25,
+    fontSize: 16,
+    color: 'white',
   },
 });
 export default WelcomeScreen;
