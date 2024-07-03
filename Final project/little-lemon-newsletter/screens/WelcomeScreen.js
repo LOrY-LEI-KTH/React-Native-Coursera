@@ -5,16 +5,18 @@ const WelcomeScreen = ({ navigation }) => {
   // Add welcome screen code here.
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.image}
-        source={require("../assets/little-lemon-logo.png")}
-        resizeMode="contain"
-        accessible={true}
-        accessibilityLabel={"Little Lemon Logo"}
-      />
-      <Text style={styles.title}>
-        Little Lemon, your local Mediterranean Bistro
-      </Text>
+      <View style={styles.contentContainer}>
+        <Image
+          style={styles.image}
+          source={require("../assets/little-lemon-logo.png")}
+          resizeMode="contain"
+          accessible={true}
+          accessibilityLabel={"Little Lemon Logo"}
+        />
+        <Text style={styles.title}>
+          Little Lemon, your local Mediterranean Bistro
+        </Text>
+      </View>
       <Pressable
         style={styles.button}
         onPress={() => {
@@ -30,22 +32,26 @@ const WelcomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 24,
+    backgroundColor: "white",
+    justifyContent: "space-between",
+  },
+  contentContainer: {
+    flex: 1,
+    justifyContent: "center",
     alignItems: "center",
-    marginTop: 150,
   },
   title: {
-    marginTop: 16,
-    paddingVertical: 20,
-    paddingHorizontal: 40,
+    marginTop: 48,
+    paddingVertical: 10,
     color: "#333333",
     textAlign: "center",
     fontSize: 20,
     fontWeight: "bold",
   },
   image: {
-    width: 142,
-    height: 250,
-    borderRadius: 5,
+    height: 200,
+    width: 300,
   },
   button: {
     borderRadius: 8,
