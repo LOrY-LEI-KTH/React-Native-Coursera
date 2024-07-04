@@ -37,6 +37,7 @@ const SubscribeScreen = () => {
       />
       <Pressable
         style={[styles.button, !isEmailValid && styles.disabled]}
+        disabled={!isEmailValid}
         onPress={() => {
           Alert.alert("Thanks for subscribing, stay tuned!");
         }}
@@ -53,7 +54,6 @@ const styles = StyleSheet.create({
     padding: 24,
     backgroundColor: "white",
   },
-
   title: {
     color: "#333333",
     textAlign: "center",
